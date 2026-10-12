@@ -2,7 +2,7 @@
 
 Assessment date: 2026-10-12. The same data is in [poam.csv](../data/poam.csv). Owner for every item: Terence, the sole administrator. Target dates are proposed commitments and are reviewed at each reassessment.
 
-**27 findings:** 9 Closed, 16 Open, 1 Blocked, 1 Accepted.
+**27 findings:** 10 Closed, 15 Open, 1 Blocked, 1 Accepted.
 
 Closed findings were fixed and then checked on the live server. The evidence IDs refer to the [evidence index](05-evidence-index.md).
 
@@ -10,7 +10,6 @@ Closed findings were fixed and then checked on the live server. The evidence IDs
 
 | ID | Finding | Severity | CSF | Risk | Planned action | Target | Status | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| F-21 | A device offline for months is still on the private network | Low | PR.AA-01 | R-15 | Remove it. Add a quarterly review of devices and keys to the access control policy | 2026-10-14 | **Open** | E-18 |
 | F-16 | Redundant host firewall rules remain | Low | PR.IR-01 | R-09 | Remove rules that duplicate others or allow more than the service needs, then verify | 2026-10-31 | **Open** | E-06 |
 | F-19 | System disk is more than three quarters full | Moderate | PR.IR-04 | R-12 | Extend the volume with free space that is already available | 2026-10-31 | **Open** | E-17 |
 | F-20 | File sharing scope has not been reviewed | Moderate | PR.IR-01, PR.AA-05 | R-14 | Confirm who connects and from where. Require named accounts. Limit it to the LAN or the private network | 2026-10-31 | **Open** | E-01 |
@@ -24,7 +23,7 @@ Closed findings were fixed and then checked on the live server. The evidence IDs
 | F-13 | No battery backup | High | PR.IR-02 | R-06 | Buy and install a battery backup for the server, router, and switch | 2026-12-31 | **Open** | E-20 |
 | F-14 | Second DNS server is offline | Moderate | PR.IR-03 | R-07 | Bring the spare Raspberry Pi back as a second resolver and sync it. Waiting on a replacement drive | 2026-12-31 | **Blocked** | E-01 |
 | F-22 | Services reached by local name use plain HTTP | Low | PR.DS-02 | R-10 | Add internal TLS for local names where practical | 2027-01-31 | **Open** | E-08 |
-| F-24 | Documentation gaps: data flows, data metadata, hardware life cycle, and policy review | Low | ID.AM-03, ID.AM-07, ID.AM-08, GV.PO-01, GV.PO-02, PR.PS-03 | R-18 | Complete the data flow map. Add owner and retention per data set. Hold the first policy review | 2027-01-31 | **Open** | E-01 |
+| F-24 | Documentation gaps: data flows, data metadata, hardware life cycle, and policy review | Low | ID.AM-03, ID.AM-07, ID.AM-08, GV.PO-01, GV.PO-02, PR.PS-03 | R-18 | Complete the data flow map. Add owner and retention per data set. Hold the first policy review and the first quarterly access review | 2027-01-31 | **Open** | E-01 |
 | F-23 | Security events are not collected, reviewed, or alerted on | Moderate | PR.PS-04, DE.CM-01, DE.CM-03, DE.CM-09 | R-17 | Pick one lightweight option for collecting key logs and alerting on login failures | 2027-02-28 | **Open** | E-01 |
 | F-12 | The LAN is flat, with smart home devices next to servers | High | PR.IR-01, PR.AA-05 | R-05 | Plan segmentation and test one device group at a time. An earlier attempt was unstable | 2027-03-31 | **Open** | E-01 |
 | F-17 | Server and media disks are not encrypted | Moderate | PR.DS-01 | R-08 | Risk accepted for now with a written reason. Revisit after the second copy exists | 2027-04-30 | **Accepted** | E-20 |
@@ -41,6 +40,7 @@ Closed findings were fixed and then checked on the live server. The evidence IDs
 | F-06 | Two monitoring containers held the Docker socket | High | PR.AA-05 | Removed it from one. Moved the other behind a read-only filtering proxy on a private network. Confirmed with mount listings | 2026-10-12 | E-04 |
 | F-07 | Password vault backups were unencrypted archives containing key material | High | PR.DS-01, PR.DS-11 | Encrypted every archive with a public key and kept the private key offline in two places. Rotated the key after a partial exposure on screen. Deleted all unencrypted archives from the server and the Nextcloud copy. Confirmed the folder is not shared | 2026-10-12 | E-05, E-16, E-19 |
 | F-08 | Published documentation overstated several controls | Moderate | ID.IM-01 | Compared each claim with the live configuration and corrected the documentation. Each control now cites evidence | 2026-10-12 | E-12 |
+| F-21 | A device offline for months was still on the private network | Low | PR.AA-01 | Removed the device from the private network. The quarterly device review is now in the access control policy | 2026-10-12 | E-22 |
 | F-26 | Old plaintext vault backups might have remained in a synced desktop folder | Moderate | PR.DS-01 | Searched the administrator's user profile, which holds the synced folder, for unencrypted vault backups. None found | 2026-10-12 | E-21 |
 
 Severity is the assessor's judgement of the finding itself, informed by the linked risk. A finding can be less severe than its risk when it is only one part of the fix.

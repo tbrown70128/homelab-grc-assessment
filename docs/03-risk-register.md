@@ -10,8 +10,8 @@ Assessment date: 2026-10-12. The same data is in [risks.csv](../data/risks.csv).
 | --- | --- | --- |
 | Critical | 0 | 0 |
 | High | 4 | 0 |
-| Moderate | 13 | 6 |
-| Low | 1 | 12 |
+| Moderate | 12 | 6 |
+| Low | 1 | 11 |
 
 ## Register, highest score first
 
@@ -32,7 +32,6 @@ Assessment date: 2026-10-12. The same data is in [risks.csv](../data/risks.csv).
 | R-07 | **DNS outage or unfiltered fallback**. The only filtering resolver fails, so the household loses DNS or falls back to an unfiltered resolver | 3 | 2 | 6 | Moderate | Mitigate | Bring the spare Raspberry Pi back as a second resolver and keep the two in sync | 2 (Low) | [F-14](04-poam.md) | 2026-12-31 |
 | R-10 | **LAN traffic in plain HTTP**. Someone on the home network reads or changes traffic to services reached by local name | 2 | 3 | 6 | Moderate | Mitigate | Add internal TLS for local names where practical | 3 (Low) | [F-22](04-poam.md) | 2027-01-31 |
 | R-14 | **File sharing exposed more widely than needed**. The file sharing service accepts connections or accounts it should not | 2 | 3 | 6 | Moderate | Mitigate | Review who can connect, require named accounts, and limit it to the LAN or the private network | 3 (Low) | [F-20](04-poam.md) | 2026-10-31 |
-| R-15 | **Old device keeps access to the private network**. A device that is offline for months or lost still has access when it returns | 2 | 3 | 6 | Moderate | Mitigate | Remove the device now and review the device list every quarter | 3 (Low) | [F-21](04-poam.md) | 2026-10-14 |
 | R-18 | **Stale or incomplete documentation**. Out-of-date documentation leads to wrong decisions, missed reviews, or a recovery that follows the wrong steps | 3 | 2 | 6 | Moderate | Mitigate | Complete the missing documents and hold a first policy review | 4 (Low) | [F-24](04-poam.md) | 2027-01-31 |
 | R-13 | **Outside supplier unavailable**. A supplier such as the private network provider or the home automation relay has an outage | 2 | 2 | 4 | Low | Accept | Local access still works. Remote access resumes when the supplier does | 4 (Low) | None | 2027-04-30 |
 
@@ -46,3 +45,11 @@ A risk is accepted only with a written reason and a review date. No High or Crit
 | --- | --- | --- | --- | --- |
 | R-08 | Theft of the server exposes data | 8 (Moderate) | Accepted for now. Encrypting the boot disk on a server that must restart unattended needs extra setup. Revisit after the second copy exists | 2027-04-30 |
 | R-13 | Outside supplier unavailable | 4 (Low) | Local access still works. Remote access resumes when the supplier does | 2027-04-30 |
+
+## Closed risks
+
+Risk IDs are never reused, so a gap in the numbers is a closed risk.
+
+| ID | Risk | Closed | What was done | Finding |
+| --- | --- | --- | --- | --- |
+| R-15 | Old device keeps access to the private network | 2026-10-12 | A device offline for months was removed from the private network. The quarterly device review is now policy | [F-21](04-poam.md) |

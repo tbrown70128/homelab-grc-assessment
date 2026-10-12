@@ -27,3 +27,4 @@ Evidence types: **Command output** (captured from the server), **Document** (a f
 | E-19 | 2026-10-12 | Owner attestation | The Nextcloud backup folder is not shared with anyone |
 | E-20 | 2026-10-12 | Owner attestation | The server has no battery backup. Disks are not encrypted |
 | E-21 | 2026-10-12 | Command output | A search of the administrator's user profile found no unencrypted vault backup archives |
+| E-22 | 2026-10-12 | Owner attestation | The device that had been offline for months was removed from the private network admin console |

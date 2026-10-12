@@ -43,6 +43,6 @@ An exception needs a reason, a risk rating, and a review date. None are recorded
 | 5 Remote access | Met | |
 | 6 Network and tool access | Not yet met. Rules are permissive | [F-25](../docs/04-poam.md) |
 | 7 Container control | Met | |
-| 8 Joiners and leavers | Partly met. A stale device remains on the private network | [F-21](../docs/04-poam.md) |
-| 9 Access review | Not yet started. First review due 2026-12-31 | [F-21](../docs/04-poam.md) |
+| 8 Joiners and leavers | Met. The one stale device was removed on 2026-10-12 | |
+| 9 Access review | Not yet started. First review due 2026-12-31 | [F-24](../docs/04-poam.md) |
 | 10 Credential exposure | Met. One key was replaced after a partial exposure | |
