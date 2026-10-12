@@ -30,3 +30,4 @@ Evidence types: **Command output** (captured from the server), **Document** (a f
 | E-22 | 2026-10-12 | Owner attestation | The device that had been offline for months was removed from the private network admin console |
 | E-23 | 2026-10-12 | Command output | The file sharing services are inactive and disabled, and their ports are closed. The only share was an empty folder |
 | E-24 | 2026-10-12 | Command output | After extending the system volume, the file system grew online and usage fell from 76 percent to 51 percent |
+| E-25 | 2026-10-12 | Command output | The administrator laptop key now asks for a passphrase, the SSH agent holds it, and login works. The unprotected safety copy no longer exists |

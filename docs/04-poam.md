@@ -2,7 +2,7 @@
 
 Assessment date: 2026-10-12. The same data is in [poam.csv](../data/poam.csv). Owner for every item: Terence, the sole administrator. Target dates are proposed commitments and are reviewed at each reassessment.
 
-**27 findings:** 12 Closed, 12 Open, 2 Blocked, 1 Accepted.
+**27 findings:** 13 Closed, 11 Open, 2 Blocked, 1 Accepted.
 
 Closed findings were fixed and then checked on the live server. The evidence IDs refer to the [evidence index](05-evidence-index.md).
 
@@ -11,7 +11,6 @@ Closed findings were fixed and then checked on the live server. The evidence IDs
 | ID | Finding | Severity | CSF | Risk | Planned action | Target | Status | Evidence |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | F-16 | Redundant host firewall rules remain | Low | PR.IR-01 | R-09 | Remove rules that duplicate others or allow more than the service needs, then verify | 2026-10-31 | **Open** | E-06 |
-| F-27 | Passphrase protection of the laptop SSH key is not confirmed | Low | PR.AA-03 | R-04 | Check the key. Add a passphrase, or record an exception with a reason | 2026-10-31 | **Open** | E-02 |
 | F-11 | Two-factor is not on every service | High | PR.AA-01, PR.AA-03 | R-04 | Turn it on for the password manager, files, photos, and budgeting services, and record it in the access control policy | 2026-11-01 | **Open** | E-14 |
 | F-10 | No restore runbook, no full restore drill, and no incident exercise | Moderate | PR.DS-11, RC.RP-03, RC.RP-05, RS.MA-01, ID.IM-04 | R-02, R-03 | Write the runbook. Restore the vault into a scratch service from an encrypted backup, typing the key in from the offline copy. Run a short incident tabletop | 2026-11-15 | **Open** | E-05 |
 | F-18 | No update review cadence or advisory monitoring | Moderate | PR.PS-02, PR.PS-05, ID.RA-01, ID.AM-08 | R-11 | Set a monthly review. Watch advisories for the services in use. Track end-of-life dates | 2026-11-15 | **Open** | E-03 |
@@ -42,5 +41,6 @@ Closed findings were fixed and then checked on the live server. The evidence IDs
 | F-20 | An unused file sharing service was listening on every network interface | Moderate | PR.IR-01, PR.AA-05 | Reviewed the service. Its only share was empty and never used. Stopped and disabled it and confirmed its ports are closed. Large files now go to the media drive over SFTP with the SSH key | 2026-10-12 | E-23 |
 | F-21 | A device offline for months was still on the private network | Low | PR.AA-01 | Removed the device from the private network. The quarterly device review is now in the access control policy | 2026-10-12 | E-22 |
 | F-26 | Old plaintext vault backups might have remained in a synced desktop folder | Moderate | PR.DS-01 | Searched the administrator's user profile, which holds the synced folder, for unencrypted vault backups. None found | 2026-10-12 | E-21 |
+| F-27 | The administrator laptop SSH key had no passphrase | Moderate | PR.AA-03 | Added a passphrase and loaded the key into the operating system SSH agent so daily use stays smooth. Confirmed the key now asks for the passphrase and that login works. Deleted the unprotected safety copy | 2026-10-12 | E-25 |
 
 Severity is the assessor's judgement of the finding itself, informed by the linked risk. A finding can be less severe than its risk when it is only one part of the fix.

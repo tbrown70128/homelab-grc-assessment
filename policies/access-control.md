@@ -39,7 +39,7 @@ An exception needs a reason, a risk rating, and a review date. None are recorded
 | 1 Unique accounts | Met | |
 | 2 Least privilege | Met. The unused file sharing service was turned off | |
 | 3 Strong sign-in | Partly met. Two-factor is not on every service | [F-11](../docs/04-poam.md) |
-| 4 Administrative access | Met for key-only SSH. Passphrase on the laptop key to be confirmed | [F-27](../docs/04-poam.md) |
+| 4 Administrative access | Met. SSH is key-only and the administrator keys have passphrases | |
 | 5 Remote access | Met | |
 | 6 Network and tool access | Not yet met. Rules are permissive | [F-25](../docs/04-poam.md) |
 | 7 Container control | Met | |
