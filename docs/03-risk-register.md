@@ -10,8 +10,8 @@ Assessment date: 2026-10-12. The same data is in [risks.csv](../data/risks.csv).
 | --- | --- | --- |
 | Critical | 0 | 0 |
 | High | 4 | 0 |
-| Moderate | 12 | 6 |
-| Low | 1 | 11 |
+| Moderate | 11 | 6 |
+| Low | 1 | 10 |
 
 ## Register, highest score first
 
@@ -31,7 +31,6 @@ Assessment date: 2026-10-12. The same data is in [risks.csv](../data/risks.csv).
 | R-16 | **Private network access rules too permissive**. Any device on the private network can reach every service, so one lost device exposes all of them | 2 | 4 | 8 | Moderate | Mitigate | Write access rules that limit each device group to the services it needs | 4 (Low) | [F-25](04-poam.md) | 2026-12-15 |
 | R-07 | **DNS outage or unfiltered fallback**. The only filtering resolver fails, so the household loses DNS or falls back to an unfiltered resolver | 3 | 2 | 6 | Moderate | Mitigate | Bring the spare Raspberry Pi back as a second resolver and keep the two in sync | 2 (Low) | [F-14](04-poam.md) | 2026-12-31 |
 | R-10 | **LAN traffic in plain HTTP**. Someone on the home network reads or changes traffic to services reached by local name | 2 | 3 | 6 | Moderate | Mitigate | Add internal TLS for local names where practical | 3 (Low) | [F-22](04-poam.md) | 2027-01-31 |
-| R-14 | **File sharing exposed more widely than needed**. The file sharing service accepts connections or accounts it should not | 2 | 3 | 6 | Moderate | Mitigate | Review who can connect, require named accounts, and limit it to the LAN or the private network | 3 (Low) | [F-20](04-poam.md) | 2026-10-31 |
 | R-18 | **Stale or incomplete documentation**. Out-of-date documentation leads to wrong decisions, missed reviews, or a recovery that follows the wrong steps | 3 | 2 | 6 | Moderate | Mitigate | Complete the missing documents and hold a first policy review | 4 (Low) | [F-24](04-poam.md) | 2027-01-31 |
 | R-13 | **Outside supplier unavailable**. A supplier such as the private network provider or the home automation relay has an outage | 2 | 2 | 4 | Low | Accept | Local access still works. Remote access resumes when the supplier does | 4 (Low) | None | 2027-04-30 |
 
@@ -52,4 +51,5 @@ Risk IDs are never reused, so a gap in the numbers is a closed risk.
 
 | ID | Risk | Closed | What was done | Finding |
 | --- | --- | --- | --- | --- |
+| R-14 | File sharing exposed more widely than needed | 2026-10-12 | The service was unused, so it was turned off. Files move over SFTP with the SSH key | [F-20](04-poam.md) |
 | R-15 | Old device keeps access to the private network | 2026-10-12 | A device offline for months was removed from the private network. The quarterly device review is now policy | [F-21](04-poam.md) |

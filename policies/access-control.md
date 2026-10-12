@@ -37,7 +37,7 @@ An exception needs a reason, a risk rating, and a review date. None are recorded
 | Statement | Status | Finding |
 | --- | --- | --- |
 | 1 Unique accounts | Met | |
-| 2 Least privilege | Partly met. File sharing scope not yet reviewed | [F-20](../docs/04-poam.md) |
+| 2 Least privilege | Met. The unused file sharing service was turned off | |
 | 3 Strong sign-in | Partly met. Two-factor is not on every service | [F-11](../docs/04-poam.md) |
 | 4 Administrative access | Met for key-only SSH. Passphrase on the laptop key to be confirmed | [F-27](../docs/04-poam.md) |
 | 5 Remote access | Met | |

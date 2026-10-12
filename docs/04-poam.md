@@ -2,7 +2,7 @@
 
 Assessment date: 2026-10-12. The same data is in [poam.csv](../data/poam.csv). Owner for every item: Terence, the sole administrator. Target dates are proposed commitments and are reviewed at each reassessment.
 
-**27 findings:** 10 Closed, 15 Open, 1 Blocked, 1 Accepted.
+**27 findings:** 11 Closed, 14 Open, 1 Blocked, 1 Accepted.
 
 Closed findings were fixed and then checked on the live server. The evidence IDs refer to the [evidence index](05-evidence-index.md).
 
@@ -12,7 +12,6 @@ Closed findings were fixed and then checked on the live server. The evidence IDs
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | F-16 | Redundant host firewall rules remain | Low | PR.IR-01 | R-09 | Remove rules that duplicate others or allow more than the service needs, then verify | 2026-10-31 | **Open** | E-06 |
 | F-19 | System disk is more than three quarters full | Moderate | PR.IR-04 | R-12 | Extend the volume with free space that is already available | 2026-10-31 | **Open** | E-17 |
-| F-20 | File sharing scope has not been reviewed | Moderate | PR.IR-01, PR.AA-05 | R-14 | Confirm who connects and from where. Require named accounts. Limit it to the LAN or the private network | 2026-10-31 | **Open** | E-01 |
 | F-27 | Passphrase protection of the laptop SSH key is not confirmed | Low | PR.AA-03 | R-04 | Check the key. Add a passphrase, or record an exception with a reason | 2026-10-31 | **Open** | E-02 |
 | F-11 | Two-factor is not on every service | High | PR.AA-01, PR.AA-03 | R-04 | Turn it on for the password manager, files, photos, and budgeting services, and record it in the access control policy | 2026-11-01 | **Open** | E-14 |
 | F-10 | No restore runbook, no full restore drill, and no incident exercise | Moderate | PR.DS-11, RC.RP-03, RC.RP-05, RS.MA-01, ID.IM-04 | R-02, R-03 | Write the runbook. Restore the vault into a scratch service from an encrypted backup, typing the key in from the offline copy. Run a short incident tabletop | 2026-11-15 | **Open** | E-05 |
@@ -40,6 +39,7 @@ Closed findings were fixed and then checked on the live server. The evidence IDs
 | F-06 | Two monitoring containers held the Docker socket | High | PR.AA-05 | Removed it from one. Moved the other behind a read-only filtering proxy on a private network. Confirmed with mount listings | 2026-10-12 | E-04 |
 | F-07 | Password vault backups were unencrypted archives containing key material | High | PR.DS-01, PR.DS-11 | Encrypted every archive with a public key and kept the private key offline in two places. Rotated the key after a partial exposure on screen. Deleted all unencrypted archives from the server and the Nextcloud copy. Confirmed the folder is not shared | 2026-10-12 | E-05, E-16, E-19 |
 | F-08 | Published documentation overstated several controls | Moderate | ID.IM-01 | Compared each claim with the live configuration and corrected the documentation. Each control now cites evidence | 2026-10-12 | E-12 |
+| F-20 | An unused file sharing service was listening on every network interface | Moderate | PR.IR-01, PR.AA-05 | Reviewed the service. Its only share was empty and never used. Stopped and disabled it and confirmed its ports are closed. Large files now go to the media drive over SFTP with the SSH key | 2026-10-12 | E-23 |
 | F-21 | A device offline for months was still on the private network | Low | PR.AA-01 | Removed the device from the private network. The quarterly device review is now in the access control policy | 2026-10-12 | E-22 |
 | F-26 | Old plaintext vault backups might have remained in a synced desktop folder | Moderate | PR.DS-01 | Searched the administrator's user profile, which holds the synced folder, for unencrypted vault backups. None found | 2026-10-12 | E-21 |
 

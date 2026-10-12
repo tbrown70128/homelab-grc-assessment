@@ -43,7 +43,7 @@ Criticality: **High** means loss or compromise would seriously harm the househol
 | A-13 | Netdata | Container | Host metrics | Low | D-07 | Local name |
 | A-14 | MySpeed | Container | Internet speed tests | Low | None sensitive | Local name |
 | A-15 | Homepage | Container | Dashboard for the whole lab | Low | D-07 | Local name |
-| A-16 | File sharing service | Service | Moves large files from the desktop to the media drive | Medium | D-06 | LAN |
+| A-16 | File sharing service (retired) | Service | Was meant for moving large files to the media drive. Never used and turned off on 2026-10-12. Files now move over SFTP with the SSH key | None | None | Off |
 | A-17 | Mesh router | Network | Gateway and DHCP, hands out the DNS server | High | None stored | LAN, and the vendor app |
 | A-18 | Managed switch | Network | Wired connectivity | Medium | None stored | LAN |
 | A-19 | Raspberry Pi 4 | Spare hardware | Planned second DNS node. Offline | Low | None | Not connected |
