@@ -2,7 +2,7 @@
 
 Assessment date: 2026-10-12. The same data is in [poam.csv](../data/poam.csv). Owner for every item: Terence, the sole administrator. Target dates are proposed commitments and are reviewed at each reassessment.
 
-**27 findings:** 12 Closed, 13 Open, 1 Blocked, 1 Accepted.
+**27 findings:** 12 Closed, 12 Open, 2 Blocked, 1 Accepted.
 
 Closed findings were fixed and then checked on the live server. The evidence IDs refer to the [evidence index](05-evidence-index.md).
 
@@ -17,7 +17,7 @@ Closed findings were fixed and then checked on the live server. The evidence IDs
 | F-18 | No update review cadence or advisory monitoring | Moderate | PR.PS-02, PR.PS-05, ID.RA-01, ID.AM-08 | R-11 | Set a monthly review. Watch advisories for the services in use. Track end-of-life dates | 2026-11-15 | **Open** | E-03 |
 | F-15 | Container-published ports are not governed by the host firewall | Moderate | PR.IR-01 | R-09 | Bind sensitive services to localhost or the private network. Add rules for container traffic | 2026-12-15 | **Open** | E-06 |
 | F-25 | Private network access rules are permissive | Moderate | PR.AA-05 | R-16 | Write access rules that limit each device group to the services it needs | 2026-12-15 | **Open** | E-01 |
-| F-09 | No second copy of photos, files, and media | High | PR.DS-11, PR.IR-03 | R-01 | Choose second storage, copy the photos and files first, then add an offsite copy. Add it to the backup policy | 2026-12-31 | **Open** | E-01 |
+| F-09 | No second copy of photos, files, and media | High | PR.DS-11, PR.IR-03 | R-01 | Blocked on the spare Raspberry Pi drive for stage 1, a second copy on a separate machine. Stage 2, an encrypted offsite copy, was deferred by the owner on 2026-10-12 and is revisited by 2027-04-30. Include database dumps for the photo and file apps, and keep any new backup key offline in two places | 2026-12-31 | **Blocked** | E-01 |
 | F-13 | No battery backup | High | PR.IR-02 | R-06 | Buy and install a battery backup for the server, router, and switch | 2026-12-31 | **Open** | E-20 |
 | F-14 | Second DNS server is offline | Moderate | PR.IR-03 | R-07 | Bring the spare Raspberry Pi back as a second resolver and sync it. Waiting on a replacement drive | 2026-12-31 | **Blocked** | E-01 |
 | F-22 | Services reached by local name use plain HTTP | Low | PR.DS-02 | R-10 | Add internal TLS for local names where practical | 2027-01-31 | **Open** | E-08 |

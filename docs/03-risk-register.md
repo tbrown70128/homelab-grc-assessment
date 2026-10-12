@@ -9,15 +9,15 @@ Assessment date: 2026-10-12. The same data is in [risks.csv](../data/risks.csv).
 | Rating | Risks now | Risks after planned treatment |
 | --- | --- | --- |
 | Critical | 0 | 0 |
-| High | 4 | 0 |
-| Moderate | 10 | 6 |
+| High | 4 | 1 |
+| Moderate | 10 | 5 |
 | Low | 1 | 9 |
 
 ## Register, highest score first
 
 | ID | Risk | L | I | Score | Rating | Treatment | Planned action | Target | Findings | Due or review |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| R-01 | **Loss of irreplaceable data**. A drive failure, theft, fire, or mistake destroys the only copy of family photos and documents | 3 | 5 | 15 | High | Mitigate | Add a second copy on separate storage, then an offsite copy | 5 (Moderate) | [F-09](04-poam.md) | 2026-12-31 |
+| R-01 | **Loss of irreplaceable data**. A drive failure, theft, fire, or mistake destroys the only copy of family photos and documents | 3 | 5 | 15 | High | Mitigate | Stage 1: a second copy on a separate machine once the spare Raspberry Pi has its drive. Stage 2: an encrypted offsite copy, deferred by the owner and revisited by 2027-04-30. The risk stays High until stage 2 is done | 10 (High) | [F-09](04-poam.md) | 2026-12-31 |
 | R-04 | **Account compromise where two-factor is off**. A stolen or guessed password gives access to a service that holds private data | 3 | 4 | 12 | High | Mitigate | Turn on two-factor on every service that supports it and confirm the laptop SSH key has a passphrase | 4 (Low) | [F-11](04-poam.md), [F-27](04-poam.md) | 2026-11-01 |
 | R-05 | **Compromised smart home device reaches servers**. A vulnerable device on the flat network scans or attacks the lab server | 3 | 4 | 12 | High | Mitigate | Plan and test network segmentation one device group at a time | 6 (Moderate) | [F-12](04-poam.md) | 2027-03-31 |
 | R-06 | **Power loss or surge damages data or hardware**. An outage or surge corrupts the database or disk, or damages the server | 4 | 3 | 12 | High | Mitigate | Buy and install a battery backup for the server and network equipment | 6 (Moderate) | [F-13](04-poam.md) | 2026-12-31 |
