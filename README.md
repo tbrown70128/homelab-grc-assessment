@@ -10,9 +10,9 @@ The lab itself is documented in [homelab-docs](https://github.com/tbrown70128/ho
 
 | | |
 | --- | --- |
-| Subcategories assessed | 41: 14 Implemented, 24 Partial, 3 Gap |
-| Risks in the register | 16: 4 High, 11 Moderate, 1 Low today. After planned treatment: 0 High, 6 Moderate, 10 Low |
-| Findings | 27: 11 closed and verified, 14 open, 1 blocked, 1 accepted |
+| Subcategories assessed | 41: 15 Implemented, 23 Partial, 3 Gap |
+| Risks in the register | 15: 4 High, 10 Moderate, 1 Low today. After planned treatment: 0 High, 6 Moderate, 9 Low |
+| Findings | 27: 12 closed and verified, 13 open, 1 blocked, 1 accepted |
 
 ### What I fixed and verified
 

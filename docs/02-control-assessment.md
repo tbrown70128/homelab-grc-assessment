@@ -2,7 +2,7 @@
 
 Assessment date: 2026-10-12. The same data is in [controls.csv](../data/controls.csv). Subcategory IDs were checked against the NIST CSF 2.0 text. The outcome wording is a short paraphrase. See the [method](00-methodology.md) for what each status means and the [evidence index](05-evidence-index.md) for the E- references.
 
-**41 subcategories assessed:** 14 Implemented, 24 Partial, 3 Gap.
+**41 subcategories assessed:** 15 Implemented, 23 Partial, 3 Gap.
 
 Subcategories that do not apply to a household environment were left out of scope, not failed.
 
@@ -41,7 +41,7 @@ Subcategories that do not apply to a household environment were left out of scop
 
 ## Protect
 
-1 Implemented, 13 Partial, 1 Gap
+2 Implemented, 12 Partial, 1 Gap
 
 | ID | Outcome | Status | How it is met | Gap | Evidence | Findings |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -59,7 +59,7 @@ Subcategories that do not apply to a household environment were left out of scop
 | PR.IR-01 | Networks and environments are protected from unauthorized logical access | **Partial** | No router port forwards. DNS filtering. A host firewall. Remote access only through the private network | Container-published ports are not governed by the host firewall. Redundant firewall rules remain. The LAN is flat | E-06, E-23 | [F-12](04-poam.md), [F-15](04-poam.md), [F-16](04-poam.md) |
 | PR.IR-02 | Assets are protected from environmental threats | **Gap** | None | No battery backup for the server or network equipment | E-20 | [F-13](04-poam.md) |
 | PR.IR-03 | Mechanisms achieve resilience requirements in normal and adverse situations | **Partial** | Home Assistant is backed up to the cloud. Monitoring detects outages | One DNS server. No second copy of core data | E-01 | [F-09](04-poam.md), [F-14](04-poam.md) |
-| PR.IR-04 | Adequate resource capacity is maintained | **Partial** | Host metrics are monitored | The system disk is more than three quarters full, with free space available to add | E-17 | [F-19](04-poam.md) |
+| PR.IR-04 | Adequate resource capacity is maintained | **Implemented** | Host metrics are monitored. The system volume was extended on 2026-10-12 and is about half full, with more unallocated space available | None | E-17, E-24 | [F-19](04-poam.md) |
 
 ## Detect
 

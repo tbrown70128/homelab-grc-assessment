@@ -10,8 +10,8 @@ Assessment date: 2026-10-12. The same data is in [risks.csv](../data/risks.csv).
 | --- | --- | --- |
 | Critical | 0 | 0 |
 | High | 4 | 0 |
-| Moderate | 11 | 6 |
-| Low | 1 | 10 |
+| Moderate | 10 | 6 |
+| Low | 1 | 9 |
 
 ## Register, highest score first
 
@@ -23,7 +23,6 @@ Assessment date: 2026-10-12. The same data is in [risks.csv](../data/risks.csv).
 | R-06 | **Power loss or surge damages data or hardware**. An outage or surge corrupts the database or disk, or damages the server | 4 | 3 | 12 | High | Mitigate | Buy and install a battery backup for the server and network equipment | 6 (Moderate) | [F-13](04-poam.md) | 2026-12-31 |
 | R-09 | **Container ports reachable from the LAN**. A service published by a container is reachable from any device on the LAN, because the host firewall does not govern it | 3 | 3 | 9 | Moderate | Mitigate | Bind sensitive services to localhost or the private network, add DOCKER-USER rules, and remove redundant rules | 3 (Low) | [F-15](04-poam.md), [F-16](04-poam.md) | 2026-12-15 |
 | R-11 | **Outdated software with known flaws**. A pinned image falls behind and a known flaw is exploited from the LAN or the private network | 3 | 3 | 9 | Moderate | Mitigate | Set a monthly update review and watch advisories for the services in use | 6 (Moderate) | [F-18](04-poam.md) | 2026-11-15 |
-| R-12 | **System disk fills up**. Logs, images, or databases fill the system disk and services stop | 3 | 3 | 9 | Moderate | Mitigate | Extend the volume using free space that is already available | 3 (Low) | [F-19](04-poam.md) | 2026-10-31 |
 | R-17 | **Security events go unnoticed**. Repeated login failures or odd behavior are not seen because logs are not reviewed or alerted on | 3 | 3 | 9 | Moderate | Mitigate | Collect key logs in one place and alert on login failures | 6 (Moderate) | [F-23](04-poam.md) | 2027-02-28 |
 | R-02 | **Backups cannot be restored**. A backup exists but fails at restore time because it was never fully restored or the procedure is unwritten | 2 | 4 | 8 | Moderate | Mitigate | Write a restore runbook and run a full restore drill twice a year | 4 (Low) | [F-10](04-poam.md) | 2026-11-15 |
 | R-03 | **Backup decryption key lost**. The offline copies of the key are lost or unreadable, so encrypted vault backups cannot be opened | 2 | 4 | 8 | Moderate | Mitigate | Keep two offline copies and test that the paper copy is readable during the restore drill | 4 (Low) | [F-10](04-poam.md) | 2026-11-15 |
@@ -51,5 +50,6 @@ Risk IDs are never reused, so a gap in the numbers is a closed risk.
 
 | ID | Risk | Closed | What was done | Finding |
 | --- | --- | --- | --- | --- |
+| R-12 | System disk fills up | 2026-10-12 | The system volume was extended using free space already available. Usage fell from 76 percent to 51 percent | [F-19](04-poam.md) |
 | R-14 | File sharing exposed more widely than needed | 2026-10-12 | The service was unused, so it was turned off. Files move over SFTP with the SSH key | [F-20](04-poam.md) |
 | R-15 | Old device keeps access to the private network | 2026-10-12 | A device offline for months was removed from the private network. The quarterly device review is now policy | [F-21](04-poam.md) |
